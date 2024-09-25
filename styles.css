@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklinwght@300;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+:root {
+    --Blue: hsl(223, 87%, 63%);
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    text-align: center;
+    padding: 50px 0;
+}
+
+h1,
+p {
+    color: var(--Gray)
+}
+
+
+
+img {
+    max-width: 100%;
+}
+
+.heading {
+    & h1 {
+        font-weight: 300;
+        padding: 50px 20px;
+
+        & span {
+            font-weight: 700;
+            color: var(--Very-Dark-Blue);
+        }
+    }
+
+    & p {
+        font-size: 14px;
+        padding-bottom: 20px;
+    }
+
+    & .form-control {
+        width: 300px;
+        margin: auto;
+
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            border: 1px solid var(--Blue);
+            border-radius: 30px;
+            outline: none;
+            color: var(--Very-Dark-Blue);
+
+            &::placeholder {
+                color: var(--Gray);
+            }
+
+
+        }
+
+        &.success {
+            input {
+                border-color: green;
+            }
+        }
+
+        & small {
+            display: none;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+
+        & .error-desktop {
+            display: none;
+        }
+
+
+
+    }
+
+
+    & button {
+        width: 100%;
+        background-color: var(--Blue);
+        color: white;
+        font-family: inherit;
+        padding: 8px;
+        border: 2px solid var(--Blue);
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.5s;
+
+        &:hover {
+            background-color: transparent;
+            color: var(--Blue);
+        }
+    }
+
+
+
+}
+
+.showcase {
+    padding: 50px 20px 80px;
+}
+
+.footer {
+    & ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & li {
+            margin: 0 20px;
+
+            & a {
+                color: var(--Blue);
+                text-decoration: none;
+                font-size: 14px;
+                padding: 10px;
+                transition: background-color 0.5s;
+
+                &:hover {
+                    background-color: var(--Blue);
+                    color: white;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    & p {
+        padding-top: 20px;
+        font-size: 14px;
+        margin-bottom: 10px;
+
+    }
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media(min-width: 700px) {
+    .heading {
+        & h1 {
+            font-size: 36px;
+        }
+
+        & .form-control {
+
+            width: auto;
+
+            & input,
+            button {
+
+                width: 170px;
+                padding: 12px 20px;
+                display: inline;
+            }
+
+            & input {
+                border-color: var(--Gray);
+                width: 300px;
+            }
+
+            & button {
+                width: 120px;
+
+            }
+
+
+            & small {
+                display: none;
+            }
+
+            & .error-desktop {
+                width: auto;
+                display: block;
+                margin-left: -180px;
+                font-size: 14px;
+                font-style: italic;
+                margin-top: -10px;
+                display: none;
+                color: var(--Light-Red)
+            }
+        }
+
+
+    }
+}
+
+.showcase {
+    & img {
+        width: 600px;
+    }
+}
+
+/* @media(min-width: 700px) {
+    .heading {
+        & h1 {
+            font-size: 36px;
+        }
+
+        & .form-control {
+            width: auto;
+
+            & input,
+            button {
+                position: relative;
+                width: auto;
+                padding: 12px 20px;
+            }
+
+            & button {
+                width: 150px;
+            }
+
+            & input {
+                border-color: var(--Gray);
+            }
+        }
+    }
+
+    .showcase {
+        & img {
+            width: 600px;
+        }
+    }*/
